@@ -1,0 +1,103 @@
+@use '../vars/variables' as *;
+
+// ─── Box sizing ───────────────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// ─── Document ─────────────────────────────────────────────────────────────────
+html {
+    scroll-behavior: smooth;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 16px;
+    text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-base;
+    color: $color-text;
+
+    background-color: $color-background;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
+    font-family: $font-family-heading;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $color-text;
+}
+
+p {
+    margin: 0;
+}
+
+// ─── Links ────────────────────────────────────────────────────────────────────
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+        color: $color-primary-dark;
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        border-radius: $border-radius-sm;
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+    }
+}
+
+// ─── Media ────────────────────────────────────────────────────────────────────
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+// ─── Forms ────────────────────────────────────────────────────────────────────
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+// ─── Lists ────────────────────────────────────────────────────────────────────
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
