@@ -10,16 +10,12 @@ Pending: cartItems: [...cartItems, optimistically added cart item]
 Pending: cartStatus: 'pending'
 Pending: error: undefined
 
-state condition1 <<choice>>
-
-Pending -down--> condition1 : updateCartItems
-condition1 --> Success : success
-condition1 --> Error : random failure
-
+Pending -down-> Success : updateCartResolved
 Success: cartItems: [...cartItems, newItem]
 Success: cartStatus: 'success'
 Success: error: undefined
 
+Pending -down-> Error : updateCartRejected
 Error: cartItems: [...prevCartItems]
 Error: cartStatus: 'error'
 Error: error: Error
