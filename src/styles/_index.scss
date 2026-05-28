@@ -1,2 +1,2 @@
-@import './mixins/mixins';
-@import './base/base';
+@use './mixins/mixins' as *;
+@use './base/base' as *;

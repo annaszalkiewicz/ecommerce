@@ -1,10 +1,9 @@
 import { useProductsStore } from './productsList.store';
 
-export const useProductsList = () =>
-    useProductsStore((state) => ({ productsList: state.productsList }));
+export const useProductsList = () => useProductsStore((state) => state.productsList);
 
-export const useIsLoading = () => useProductsStore((state) => ({ isLoading: state.isLoading }));
+export const useIsLoading = () => useProductsStore((state) => state.isLoading);
 
-export const useError = () => useProductsStore((state) => ({ error: state.error }));
+export const useError = () => useProductsStore((state) => state.error);
 
 export const useProductsListActions = () => useProductsStore((state) => state.actions);
