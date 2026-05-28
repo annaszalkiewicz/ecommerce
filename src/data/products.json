@@ -1,0 +1,454 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Classic Blue Ballpoint Pen",
+            "description": "Smooth-writing ballpoint pen with comfortable grip and reliable blue ink. Perfect for everyday writing tasks.",
+            "imgUrl": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=640",
+            "price": 4.99,
+            "stock": 150,
+            "category": "Pens"
+        },
+        {
+            "id": 2,
+            "name": "Premium Gel Pen Set (5-pack)",
+            "description": "Set of 5 vibrant gel pens with fine 0.5mm tips. Ideal for note-taking, journaling, and detailed writing.",
+            "imgUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640",
+            "price": 19.99,
+            "stock": 85,
+            "category": "Pens"
+        },
+        {
+            "id": 3,
+            "name": "Executive Fountain Pen",
+            "description": "Elegant fountain pen with stainless steel nib and refillable ink cartridge. A sophisticated writing instrument.",
+            "imgUrl": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=640",
+            "price": 89.99,
+            "stock": 30,
+            "category": "Pens"
+        },
+        {
+            "id": 4,
+            "name": "Red Ink Ballpoint Pen",
+            "description": "Reliable red ballpoint pen for marking, editing, and grading. Consistent ink flow with long-lasting cartridge.",
+            "imgUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=640",
+            "price": 3.99,
+            "stock": 200,
+            "category": "Pens"
+        },
+        {
+            "id": 5,
+            "name": "Multi-Color Retractable Pen",
+            "description": "4-in-1 retractable pen with black, blue, red, and green ink. Switch colors with a click for color-coded notes.",
+            "imgUrl": "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=640",
+            "price": 9.99,
+            "stock": 120,
+            "category": "Pens"
+        },
+        {
+            "id": 6,
+            "name": "HB Graphite Pencil (12-pack)",
+            "description": "Classic HB pencils for writing and sketching. Pre-sharpened with break-resistant lead and smooth finish.",
+            "imgUrl": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=640",
+            "price": 8.99,
+            "stock": 180,
+            "category": "Pencils"
+        },
+        {
+            "id": 7,
+            "name": "Mechanical Pencil 0.5mm",
+            "description": "Precision mechanical pencil with cushioned grip and built-in eraser. Auto-advancing lead mechanism.",
+            "imgUrl": "https://images.unsplash.com/photo-1598024055266-e772a5f8f9af?w=640",
+            "price": 12.99,
+            "stock": 95,
+            "category": "Pencils"
+        },
+        {
+            "id": 8,
+            "name": "Colored Pencil Set (24 colors)",
+            "description": "Vibrant set of 24 colored pencils with soft cores for smooth blending. Great for art projects and coloring.",
+            "imgUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640",
+            "price": 34.99,
+            "stock": 60,
+            "category": "Pencils"
+        },
+        {
+            "id": 9,
+            "name": "Carpenter's Pencil Set (6-pack)",
+            "description": "Flat-body carpenter pencils with durable, thick graphite core. Perfect for marking on rough surfaces.",
+            "imgUrl": "https://images.unsplash.com/photo-1589810264340-0ce27bfbf751?w=640",
+            "price": 11.99,
+            "stock": 45,
+            "category": "Pencils"
+        },
+        {
+            "id": 10,
+            "name": "Charcoal Drawing Pencils (Set of 6)",
+            "description": "Professional-grade charcoal pencils in assorted grades for expressive sketching and shading.",
+            "imgUrl": "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=640",
+            "price": 24.99,
+            "stock": 40,
+            "category": "Pencils"
+        },
+        {
+            "id": 11,
+            "name": "A5 Hardcover Lined Notebook",
+            "description": "192-page hardcover notebook with ruled lines, ribbon bookmark, and elastic closure. Acid-free paper.",
+            "imgUrl": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=640",
+            "price": 29.99,
+            "stock": 75,
+            "category": "Notebooks"
+        },
+        {
+            "id": 12,
+            "name": "Spiral-Bound A4 Notebook",
+            "description": "80-sheet spiral notebook with perforated pages and wide-ruled lines. Durable plastic cover.",
+            "imgUrl": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=640",
+            "price": 14.99,
+            "stock": 110,
+            "category": "Notebooks"
+        },
+        {
+            "id": 13,
+            "name": "Dotted Grid Journal",
+            "description": "Dot grid journal perfect for bullet journaling, planning, and creative layouts. 160gsm thick paper.",
+            "imgUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=640",
+            "price": 39.99,
+            "stock": 50,
+            "category": "Notebooks"
+        },
+        {
+            "id": 14,
+            "name": "Pocket Memo Pad (3-pack)",
+            "description": "Compact pocket-sized memo pads with 50 sheets each. Fits easily in a pocket or bag for on-the-go notes.",
+            "imgUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=640",
+            "price": 9.99,
+            "stock": 140,
+            "category": "Notebooks"
+        },
+        {
+            "id": 15,
+            "name": "Kraft Cover Sketchbook A4",
+            "description": "110-page sketchbook with heavyweight 200gsm paper. Kraft cover for a natural, eco-friendly look.",
+            "imgUrl": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=640",
+            "price": 27.99,
+            "stock": 55,
+            "category": "Notebooks"
+        },
+        {
+            "id": 16,
+            "name": "Dual-Tip Marker Set (12 colors)",
+            "description": "Double-ended markers with fine and broad tips. Water-based ink for coloring, illustration, and design.",
+            "imgUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640",
+            "price": 44.99,
+            "stock": 65,
+            "category": "Markers"
+        },
+        {
+            "id": 17,
+            "name": "Permanent Black Marker (3-pack)",
+            "description": "Quick-drying, waterproof permanent markers with chisel tips. Writes on most surfaces including plastic and metal.",
+            "imgUrl": "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=640",
+            "price": 14.99,
+            "stock": 100,
+            "category": "Markers"
+        },
+        {
+            "id": 18,
+            "name": "Whiteboard Markers (Set of 4)",
+            "description": "Low-odor dry-erase markers in black, blue, red, and green. Easy to wipe, vivid colors.",
+            "imgUrl": "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=640",
+            "price": 16.99,
+            "stock": 90,
+            "category": "Markers"
+        },
+        {
+            "id": 19,
+            "name": "Pastel Highlighter Set (6 colors)",
+            "description": "Soft pastel highlighters with chisel tips. Gentle on the eyes while still making text stand out.",
+            "imgUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=640",
+            "price": 18.99,
+            "stock": 80,
+            "category": "Highlighters"
+        },
+        {
+            "id": 20,
+            "name": "Neon Highlighter (5-pack)",
+            "description": "Bright neon highlighters in yellow, orange, pink, green, and blue. Long-lasting ink that won't dry out.",
+            "imgUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=640",
+            "price": 12.99,
+            "stock": 130,
+            "category": "Highlighters"
+        },
+        {
+            "id": 21,
+            "name": "Classic White Eraser (3-pack)",
+            "description": "Soft PVC-free erasers that remove graphite cleanly without smudging or tearing paper.",
+            "imgUrl": "https://images.unsplash.com/photo-1589810264340-0ce27bfbf751?w=640",
+            "price": 5.99,
+            "stock": 170,
+            "category": "Erasers"
+        },
+        {
+            "id": 22,
+            "name": "Kneaded Art Eraser",
+            "description": "Pliable kneaded eraser for precision erasing and lightening in drawing. Moldable to any shape.",
+            "imgUrl": "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=640",
+            "price": 6.99,
+            "stock": 60,
+            "category": "Erasers"
+        },
+        {
+            "id": 23,
+            "name": "Electric Eraser with Refills",
+            "description": "Battery-powered electric eraser for precise correction. Comes with 20 replacement refills.",
+            "imgUrl": "https://images.unsplash.com/photo-1598024055266-e772a5f8f9af?w=640",
+            "price": 29.99,
+            "stock": 35,
+            "category": "Erasers"
+        },
+        {
+            "id": 24,
+            "name": "Transparent Ruler 30cm",
+            "description": "Clear plastic ruler with centimeter and millimeter markings. Shatter-resistant with beveled edge.",
+            "imgUrl": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=640",
+            "price": 3.99,
+            "stock": 160,
+            "category": "Rulers"
+        },
+        {
+            "id": 25,
+            "name": "Metal Ruler 40cm",
+            "description": "Stainless steel ruler with cork backing to prevent slipping. Dual cm/inch markings for precision.",
+            "imgUrl": "https://images.unsplash.com/photo-1589810264340-0ce27bfbf751?w=640",
+            "price": 14.99,
+            "stock": 70,
+            "category": "Rulers"
+        },
+        {
+            "id": 26,
+            "name": "Geometry Set with Compass",
+            "description": "Complete geometry set including compass, protractor, set squares, and ruler in a protective case.",
+            "imgUrl": "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=640",
+            "price": 22.99,
+            "stock": 45,
+            "category": "Rulers"
+        },
+        {
+            "id": 27,
+            "name": "Desktop Stapler",
+            "description": "Full-strip stapler that fastens up to 25 sheets at once. Built-in staple remover and non-slip base.",
+            "imgUrl": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=640",
+            "price": 24.99,
+            "stock": 80,
+            "category": "Staplers & Accessories"
+        },
+        {
+            "id": 28,
+            "name": "Mini Stapler with Staples",
+            "description": "Compact mini stapler with 1000 staples included. Portable and lightweight for bags and desks.",
+            "imgUrl": "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=640",
+            "price": 9.99,
+            "stock": 120,
+            "category": "Staplers & Accessories"
+        },
+        {
+            "id": 29,
+            "name": "Staple Refills (5000 pcs)",
+            "description": "Standard 24/6 staples compatible with most desktop staplers. Box of 5000 for long-lasting use.",
+            "imgUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=640",
+            "price": 7.99,
+            "stock": 190,
+            "category": "Staplers & Accessories"
+        },
+        {
+            "id": 30,
+            "name": "Stainless Steel Scissors 21cm",
+            "description": "Sharp stainless steel blades with ergonomic soft-grip handles. Ideal for paper, cardboard, and fabric.",
+            "imgUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=640",
+            "price": 18.99,
+            "stock": 85,
+            "category": "Scissors"
+        },
+        {
+            "id": 31,
+            "name": "Children's Safety Scissors",
+            "description": "Rounded-tip scissors designed for safe use by kids. Colorful handles with spring-assist mechanism.",
+            "imgUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640",
+            "price": 7.99,
+            "stock": 110,
+            "category": "Scissors"
+        },
+        {
+            "id": 32,
+            "name": "Transparent Adhesive Tape",
+            "description": "Crystal-clear adhesive tape roll 19mm x 33m. Invisible on paper with easy tear and strong hold.",
+            "imgUrl": "https://images.unsplash.com/photo-1589810264340-0ce27bfbf751?w=640",
+            "price": 4.99,
+            "stock": 200,
+            "category": "Tape"
+        },
+        {
+            "id": 33,
+            "name": "Masking Tape 25mm",
+            "description": "Removable masking tape for clean edges in painting and crafts. Easy to tear by hand, leaves no residue.",
+            "imgUrl": "https://images.unsplash.com/photo-1598024055266-e772a5f8f9af?w=640",
+            "price": 6.99,
+            "stock": 140,
+            "category": "Tape"
+        },
+        {
+            "id": 34,
+            "name": "Washi Tape Set (10 rolls)",
+            "description": "Decorative washi tape set with various patterns. Repositionable and great for scrapbooking and decoration.",
+            "imgUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640",
+            "price": 24.99,
+            "stock": 55,
+            "category": "Tape"
+        },
+        {
+            "id": 35,
+            "name": "Double-Sided Tape Roll",
+            "description": "Strong double-sided adhesive tape for mounting and crafting. 12mm x 25m roll.",
+            "imgUrl": "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=640",
+            "price": 8.99,
+            "stock": 100,
+            "category": "Tape"
+        },
+        {
+            "id": 36,
+            "name": "Manila File Folder (10-pack)",
+            "description": "Classic manila folders with reinforced tabs. Letter-size, 1/3 cut for organized filing.",
+            "imgUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=640",
+            "price": 12.99,
+            "stock": 90,
+            "category": "Folders & Binders"
+        },
+        {
+            "id": 37,
+            "name": "A4 Ring Binder (3-ring)",
+            "description": "Durable 3-ring binder with D-ring mechanism and clear overlay cover. Holds up to 250 sheets.",
+            "imgUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=640",
+            "price": 19.99,
+            "stock": 65,
+            "category": "Folders & Binders"
+        },
+        {
+            "id": 38,
+            "name": "Expanding File Organizer",
+            "description": "Accordion-style expanding file with 12 pockets and labeled tabs. Keeps documents sorted and portable.",
+            "imgUrl": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=640",
+            "price": 34.99,
+            "stock": 40,
+            "category": "Folders & Binders"
+        },
+        {
+            "id": 39,
+            "name": "Clear Document Sleeves (50-pack)",
+            "description": "Transparent A4 document pockets with top opening. Protects papers while keeping them visible.",
+            "imgUrl": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=640",
+            "price": 15.99,
+            "stock": 120,
+            "category": "Folders & Binders"
+        },
+        {
+            "id": 40,
+            "name": "Classic Yellow Sticky Notes (3x3)",
+            "description": "Pack of 12 pads with 100 sheets each. Repositionable adhesive that sticks securely without leaving marks.",
+            "imgUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=640",
+            "price": 16.99,
+            "stock": 160,
+            "category": "Sticky Notes"
+        },
+        {
+            "id": 41,
+            "name": "Colored Sticky Notes Cube",
+            "description": "400-sheet cube of sticky notes in assorted pastel colors. Great for reminders and quick messages.",
+            "imgUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=640",
+            "price": 11.99,
+            "stock": 95,
+            "category": "Sticky Notes"
+        },
+        {
+            "id": 42,
+            "name": "Sticky Page Markers (5 colors)",
+            "description": "Narrow sticky tabs for marking pages in books and documents. 500 tabs in 5 neon colors.",
+            "imgUrl": "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=640",
+            "price": 8.99,
+            "stock": 130,
+            "category": "Sticky Notes"
+        },
+        {
+            "id": 43,
+            "name": "Paper Clips Box (200 pcs)",
+            "description": "Standard 28mm nickel-plated paper clips. Smooth finish for easy sliding and secure document holding.",
+            "imgUrl": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=640",
+            "price": 5.99,
+            "stock": 180,
+            "category": "Paper Clips & Fasteners"
+        },
+        {
+            "id": 44,
+            "name": "Colored Paper Clips (100 pcs)",
+            "description": "Vinyl-coated paper clips in assorted colors. Add a splash of color to your organization.",
+            "imgUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640",
+            "price": 7.99,
+            "stock": 110,
+            "category": "Paper Clips & Fasteners"
+        },
+        {
+            "id": 45,
+            "name": "Binder Clips Assorted (48 pcs)",
+            "description": "Mixed-size binder clips in small, medium, and large. Strong grip for holding stacks of paper together.",
+            "imgUrl": "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=640",
+            "price": 13.99,
+            "stock": 75,
+            "category": "Paper Clips & Fasteners"
+        },
+        {
+            "id": 46,
+            "name": "Correction Tape Roller",
+            "description": "Dry correction tape for instant coverage. 5mm x 8m tape with ergonomic applicator body.",
+            "imgUrl": "https://images.unsplash.com/photo-1598024055266-e772a5f8f9af?w=640",
+            "price": 8.99,
+            "stock": 105,
+            "category": "Correction Supplies"
+        },
+        {
+            "id": 47,
+            "name": "Correction Fluid Bottle",
+            "description": "Quick-drying correction fluid with foam brush applicator. Covers mistakes smoothly for easy rewriting.",
+            "imgUrl": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=640",
+            "price": 6.99,
+            "stock": 90,
+            "category": "Correction Supplies"
+        },
+        {
+            "id": 48,
+            "name": "A4 Copy Paper Ream (500 sheets)",
+            "description": "Multipurpose 80gsm white copy paper suitable for printing, copying, and everyday office use.",
+            "imgUrl": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=640",
+            "price": 22.99,
+            "stock": 150,
+            "category": "Paper & Pads"
+        },
+        {
+            "id": 49,
+            "name": "Legal Pad Yellow Lined (3-pack)",
+            "description": "Classic wide-ruled legal pads with 50 tear-off sheets each. Chipboard backing for sturdy writing surface.",
+            "imgUrl": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=640",
+            "price": 14.99,
+            "stock": 85,
+            "category": "Paper & Pads"
+        },
+        {
+            "id": 50,
+            "name": "Colored Cardstock Pack (50 sheets)",
+            "description": "Assorted color cardstock in 10 vibrant shades. 160gsm weight ideal for crafts, printing, and presentations.",
+            "imgUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=640",
+            "price": 19.99,
+            "stock": 60,
+            "category": "Paper & Pads"
+        }
+    ]
+}
