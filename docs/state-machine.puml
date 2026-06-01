@@ -1,0 +1,27 @@
+@startuml Add to cart state machine
+[*] --> Idle
+
+Idle: cartStatus: 'idle'
+Idle: cartItems: [] | [...cartItems]
+Idle: error: undefined
+
+Idle -down-> Pending : addToCart
+Pending: cartItems: [...cartItems, optimistically added cart item]
+Pending: cartStatus: 'pending'
+Pending: error: undefined
+
+Pending -down-> Success : updateCartResolved
+Success: cartItems: [...cartItems, newItem]
+Success: cartStatus: 'success'
+Success: error: undefined
+
+Pending -down-> Error : updateCartRejected
+Error: cartItems: [...prevCartItems]
+Error: cartStatus: 'error'
+Error: error: Error
+
+Success --> Idle : message success
+Error --> Idle : rollback to previous items \nmessage error
+
+Idle -right--> [*]
+@enduml

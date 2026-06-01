@@ -1,4 +1,6 @@
 {
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "https://www.plantuml.com/plantuml",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
