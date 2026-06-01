@@ -1,0 +1,54 @@
+@use '@/styles/vars/variables' as *;
+@use '@/styles/functions/functions' as *;
+
+.infoBar {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+
+    padding: $spacing-sm $spacing-md;
+    border: rem(1px) solid currentcolor;
+    border-radius: $border-radius-sm;
+
+    font-size: $font-size-sm;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.message {
+    flex: 1;
+    color: $color-text;
+}
+
+.dismiss {
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    padding: 0;
+    border: 0;
+
+    font-size: $font-size-lg;
+    line-height: 1;
+    color: inherit;
+
+    background: none;
+}
+
+.success {
+    color: $color-success;
+}
+
+.info {
+    color: $color-primary;
+}
+
+.error {
+    color: $color-error;
+}
+
+.warning {
+    color: $color-warning;
+}

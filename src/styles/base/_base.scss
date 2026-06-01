@@ -1,4 +1,5 @@
 @use '../vars/variables' as *;
+@use '../functions/functions' as *;
 
 // ─── Box sizing ───────────────────────────────────────────────────────────────
 *,
@@ -67,8 +68,8 @@ a {
 
     &:focus-visible {
         border-radius: $border-radius-sm;
-        outline: 2px solid $color-primary;
-        outline-offset: 2px;
+        outline: rem(2px) solid $color-primary;
+        outline-offset: rem(2px);
     }
 }
 

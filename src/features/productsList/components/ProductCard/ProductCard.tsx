@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import type { Product } from '@/types';
+import { useCartActions } from '@/features/cart/store';
 import imagePlaceholder from '../../assets/image-placeholder.svg';
 import styles from './ProductCard.module.scss';
 import { formatCurrency } from '../../helpers';
@@ -10,9 +11,10 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps) => {
     const { t } = useTranslation();
+    const { addToCart } = useCartActions();
 
     const handleAddToCart = () => {
-        console.log('Not implemented yet');
+        void addToCart(product.id);
     };
 
     return (

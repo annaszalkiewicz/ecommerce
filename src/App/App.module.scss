@@ -1,5 +1,6 @@
 @use '@/styles/vars/variables' as *;
 @use '@/styles/mixins/mixins' as *;
+@use '@/styles/functions/functions' as *;
 
 .app {
     width: 100%;
@@ -19,10 +20,18 @@
 .main {
     @include container;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr rem(320px);
     gap: $spacing-xl;
     padding-block: $spacing-xl;
+
+    @include respond-to(lg) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.products {
+    min-width: 0;
 }
 
 .title {

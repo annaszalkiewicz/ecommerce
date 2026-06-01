@@ -1,4 +1,5 @@
 @use '../vars/variables' as *;
+@use '../functions/functions' as *;
 
 // ─── Responsive ───────────────────────────────────────────────────────────────
 @mixin respond-to($breakpoint) {
@@ -65,9 +66,9 @@
 
     overflow: hidden;
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    width: rem(1px);
+    height: rem(1px);
+    margin: rem(-1px);
     padding: 0;
     border: 0;
 
@@ -78,8 +79,8 @@
 
 // ─── Interaction ──────────────────────────────────────────────────────────────
 @mixin focus-ring {
-    outline: 2px solid $color-primary;
-    outline-offset: 2px;
+    outline: rem(2px) solid $color-primary;
+    outline-offset: rem(2px);
 }
 
 @mixin reset-button {

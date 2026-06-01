@@ -1,5 +1,6 @@
 @use '@/styles/vars/variables' as *;
 @use '@/styles/mixins/mixins' as *;
+@use '@/styles/functions/functions' as *;
 
 .card {
     overflow: hidden;
@@ -7,7 +8,7 @@
     flex-direction: column;
 
     height: 100%;
-    border: 1px solid $color-border;
+    border: rem(1px) solid $color-border;
     border-radius: $border-radius-md;
 
     background-color: $color-background;
@@ -18,7 +19,7 @@
         box-shadow $transition-base;
 
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(rem(-2px));
         box-shadow: $shadow-md;
     }
 }

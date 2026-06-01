@@ -1,19 +1,56 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-import type { CartState } from '@/types';
+import type { CartAction, CartState } from '@/types';
+import { addToCart } from '@/data/helpers';
 
-export const useCartStore = create<CartState>()(
+const STATUS_RESET_DELAY = 10000;
+
+const initialState: CartState = {
+    cartStatus: 'idle',
+    cartItems: [],
+    error: undefined,
+};
+
+export const useCartStore = create<CartState & CartAction>()(
     devtools(
         persist(
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            (_set) => ({
-                cartStatus: 'idle',
-                cartItems: [],
-                error: undefined,
+            (set, get) => ({
+                ...initialState,
+                actions: {
+                    addToCart: async (productId) => {
+                        const previousCartItems = get().cartItems;
+                        const existing = previousCartItems.find(
+                            (item) => item.productId === productId
+                        );
+                        const cartItems = existing
+                            ? previousCartItems.map((item) =>
+                                  item.productId === productId
+                                      ? { ...item, quantity: item.quantity + 1 }
+                                      : item
+                              )
+                            : [...previousCartItems, { productId, quantity: 1 }];
 
-                addToCart: () => {
-                    // eslint-disable-next-line no-console
-                    console.log('Not implemented yet');
+                        set({ cartItems, cartStatus: 'pending', error: undefined });
+
+                        try {
+                            await addToCart(productId);
+                            set({ cartStatus: 'success' });
+                        } catch (error) {
+                            set({
+                                cartItems: previousCartItems,
+                                cartStatus: 'error',
+                                error:
+                                    error instanceof Error
+                                        ? error
+                                        : new Error('Failed to add the product to your cart.'),
+                            });
+                        } finally {
+                            setTimeout(
+                                () => set({ cartStatus: 'idle', error: undefined }),
+                                STATUS_RESET_DELAY
+                            );
+                        }
+                    },
                 },
             }),
             {
