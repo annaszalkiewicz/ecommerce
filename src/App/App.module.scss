@@ -1,4 +1,30 @@
+@use '@/styles/vars/variables' as *;
+@use '@/styles/mixins/mixins' as *;
+
 .app {
     width: 100%;
     height: 100%;
+}
+
+.header {
+    @include container;
+
+    padding: $spacing-xl $spacing-xl 0 $spacing-xl;
+}
+
+.title {
+    text-align: center;
+}
+
+.main {
+    @include container;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    padding-block: $spacing-xl;
+}
+
+.title {
+    font-size: $font-size-2xl;
 }

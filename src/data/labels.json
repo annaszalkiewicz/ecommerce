@@ -1,0 +1,6 @@
+{
+    "title": "Your Stationery Store",
+    "loading": "Loading products...",
+    "error": "Failed to load products: {{message}}",
+    "addToCart": "Add to cart"
+}
