@@ -34,11 +34,9 @@ export const useCartStore = create<CartState & CartAction>()(
 
                         try {
                             await addToCart(productId);
-                            set({ cartStatus: 'success' });
                         } catch (error) {
                             set({
                                 cartItems: previousCartItems,
-                                cartStatus: 'error',
                                 error:
                                     error instanceof Error
                                         ? error

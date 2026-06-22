@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import type { Product } from '@/types';
-import { useCartActions } from '@/features/cart/store';
+import { useCartActions } from '@/features/cart/cart.hooks';
 import imagePlaceholder from '../../assets/image-placeholder.svg';
 import styles from './ProductCard.module.scss';
 import { formatCurrency } from '../../helpers';

@@ -2,13 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { useProductsList } from '@/features/productsList';
 import { formatCurrency } from '@/features/productsList/helpers';
 import { InfoBar } from '@/ui';
-import { useCartItems, useCartStatus } from '../../store';
+import { useCartError, useCartItems, useCartStatus } from '../../cart.hooks';
 import styles from './Cart.module.scss';
 
 export const Cart = () => {
     const { t } = useTranslation();
     const cartItems = useCartItems();
     const cartStatus = useCartStatus();
+    const cartError = useCartError();
     const productsList = useProductsList();
 
     const lines = cartItems
@@ -32,7 +33,7 @@ export const Cart = () => {
                 )}
             </header>
 
-            {cartStatus === 'error' && <InfoBar variant="error" message={t('cart.error')} />}
+            {cartError && <InfoBar variant="error" message={t('cart.error')} />}
 
             {lines.length === 0 ? (
                 <p className={styles.empty}>{t('cart.empty')}</p>
