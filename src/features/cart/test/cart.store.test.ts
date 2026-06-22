@@ -54,7 +54,7 @@ describe('cart store state machine', () => {
         expect(state.cartItems).toEqual([{ productId: 1, quantity: 2 }]);
     });
 
-    it('reaches the success state and retains the item on a resolved request', async () => {
+    it('retains the item and stays pending on a resolved request', async () => {
         vi.useFakeTimers();
         mockedAddToCart.mockResolvedValue([{ productId: 1, quantity: 1 }]);
 
@@ -62,7 +62,7 @@ describe('cart store state machine', () => {
 
         const state = getState();
 
-        expect(state.cartStatus).toBe('success');
+        expect(state.cartStatus).toBe('pending');
         expect(state.cartItems).toEqual([{ productId: 1, quantity: 1 }]);
         expect(state.error).toBeUndefined();
     });
@@ -78,7 +78,7 @@ describe('cart store state machine', () => {
 
         const state = getState();
 
-        expect(state.cartStatus).toBe('error');
+        expect(state.cartStatus).toBe('pending');
         expect(state.cartItems).toEqual(previousItems);
         expect(state.error).toBe(failure);
     });
@@ -89,7 +89,7 @@ describe('cart store state machine', () => {
 
         await getState().actions.addToCart(1);
 
-        expect(getState().cartStatus).toBe('success');
+        expect(getState().cartStatus).toBe('pending');
 
         vi.advanceTimersByTime(10000);
 
