@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom/vitest';
 import { afterEach, beforeEach, vi } from 'vitest';
 
 // NOTE: stores must NOT be imported here. Each test file registers its own
