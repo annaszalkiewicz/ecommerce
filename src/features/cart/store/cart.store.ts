@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import type { CartAction, CartState } from '@/types';
-import { addToCart } from '@/data/helpers';
+import { addToCart, removeFromCart } from '@/data/helpers';
 
 const STATUS_RESET_DELAY = 10000;
 
@@ -41,6 +41,31 @@ export const useCartStore = create<CartState & CartAction>()(
                                     error instanceof Error
                                         ? error
                                         : new Error('Failed to add the product to your cart.'),
+                            });
+                        } finally {
+                            setTimeout(
+                                () => set({ cartStatus: 'idle', error: undefined }),
+                                STATUS_RESET_DELAY
+                            );
+                        }
+                    },
+                    removeFromCart: async (productId) => {
+                        const previousCartItems = get().cartItems;
+                        const cartItems = previousCartItems.filter(
+                            (item) => item.productId !== productId
+                        );
+
+                        set({ cartItems, cartStatus: 'pending', error: undefined });
+
+                        try {
+                            await removeFromCart(productId);
+                        } catch (error) {
+                            set({
+                                cartItems: previousCartItems,
+                                error:
+                                    error instanceof Error
+                                        ? error
+                                        : new Error('Failed to remove the product from your cart.'),
                             });
                         } finally {
                             setTimeout(

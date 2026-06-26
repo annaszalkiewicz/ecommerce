@@ -6,15 +6,17 @@ import { saveCartItems } from '@/features/cart/machine/cart.persistence';
 import { useCartStore } from '@/features/cart/store/cart.store';
 import { renderApp, setupIntegrationTest } from '@/test/helpers/renderApp';
 import type { CartItem } from '@/types';
-import { addToCartError, cartProduct, resolvedCartItem } from './fixtures';
+import { addToCartError, cartProduct, removeFromCartError, resolvedCartItem } from './fixtures';
 
 vi.mock('@/data/helpers', () => ({
     addToCart: vi.fn(),
+    removeFromCart: vi.fn(),
     fetchProductsList: vi.fn(),
 }));
 
 const mockedFetchProductsList = vi.mocked(helpers.fetchProductsList);
 const mockedAddToCart = vi.mocked(helpers.addToCart);
+const mockedRemoveFromCart = vi.mocked(helpers.removeFromCart);
 
 const getCartSection = () => screen.getByRole('region', { name: 'Your cart' });
 
@@ -113,5 +115,46 @@ describe.each(['store', 'machine'] as const)('cart integration (%s backend)', (b
 
         expect(footer).not.toBeNull();
         expect(within(footer!).getByText(/19,99/)).toBeInTheDocument();
+    });
+
+    it('optimistically removes the line item when remove is clicked', async () => {
+        mockedRemoveFromCart.mockReturnValue(new Promise<CartItem[]>(() => {}));
+        seedCartWithItem(1);
+
+        await loadProducts();
+
+        const cart = within(getCartSection());
+
+        await waitFor(() => {
+            expect(cart.getByText(cartProduct.name)).toBeInTheDocument();
+        });
+
+        const user = userEvent.setup();
+        await user.click(screen.getByRole('button', { name: 'Remove' }));
+
+        expect(cart.getByText('Your cart is empty.')).toBeInTheDocument();
+        expect(cart.queryByText(cartProduct.name)).not.toBeInTheDocument();
+    });
+
+    it('rolls back the cart and shows an error when remove fails', async () => {
+        mockedRemoveFromCart.mockRejectedValue(removeFromCartError);
+        seedCartWithItem(1);
+
+        await loadProducts();
+
+        const cart = within(getCartSection());
+
+        await waitFor(() => {
+            expect(cart.getByText(cartProduct.name)).toBeInTheDocument();
+        });
+
+        const user = userEvent.setup();
+        await user.click(screen.getByRole('button', { name: 'Remove' }));
+
+        await waitFor(() => {
+            expect(cart.getByText(cartProduct.name)).toBeInTheDocument();
+        });
+
+        expect(screen.getByRole('alert')).toBeInTheDocument();
     });
 });

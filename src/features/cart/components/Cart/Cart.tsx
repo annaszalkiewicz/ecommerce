@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { useProductsList } from '@/features/productsList';
 import { formatCurrency } from '@/features/productsList/helpers';
-import { InfoBar } from '@/ui';
-import { useCartError, useCartItems, useCartStatus } from '../../cart.hooks';
+import { IconButton, InfoBar } from '@/ui';
+import { useCartActions, useCartError, useCartItems, useCartStatus } from '../../cart.hooks';
 import styles from './Cart.module.scss';
 
 export const Cart = () => {
@@ -10,6 +10,7 @@ export const Cart = () => {
     const cartItems = useCartItems();
     const cartStatus = useCartStatus();
     const cartError = useCartError();
+    const { removeFromCart } = useCartActions();
     const productsList = useProductsList();
 
     const lines = cartItems
@@ -49,6 +50,13 @@ export const Cart = () => {
                                 <span className={styles.subtotal}>
                                     {formatCurrency(line.product.price * line.quantity)}
                                 </span>
+                                <IconButton
+                                    label={t('cart.remove')}
+                                    className={styles.remove}
+                                    onClick={() => void removeFromCart(line.productId)}
+                                >
+                                    &times;
+                                </IconButton>
                             </li>
                         ))}
                     </ul>

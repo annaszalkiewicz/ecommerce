@@ -7,6 +7,7 @@ export type CartStatus = 'idle' | 'pending' | 'success' | 'error';
 
 export interface CartActions {
     addToCart: (productId: number) => Promise<void>;
+    removeFromCart: (productId: number) => Promise<void>;
 }
 
 export interface CartAction {

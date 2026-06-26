@@ -24,6 +24,9 @@ export const useMachineCartActions = (): CartActions => {
             addToCart: async (productId: number) => {
                 actorRef.send({ type: 'addToCart', productId });
             },
+            removeFromCart: async (productId: number) => {
+                actorRef.send({ type: 'removeFromCart', productId });
+            },
         }),
         [actorRef]
     );

@@ -8,6 +8,7 @@
         "empty": "Your cart is empty.",
         "total": "Total",
         "syncing": "Syncing...",
-        "error": "Could not add the item to your cart. Please try again."
+        "error": "Could not add the item to your cart. Please try again.",
+        "remove": "Remove"
     }
 }

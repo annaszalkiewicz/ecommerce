@@ -15,4 +15,6 @@ export const secondCartProduct = createProduct({
 
 export const addToCartError = new Error('Failed to add the product to your cart.');
 
+export const removeFromCartError = new Error('Failed to remove the product from your cart.');
+
 export const resolvedCartItem = (productId: number): CartItem[] => [{ productId, quantity: 1 }];

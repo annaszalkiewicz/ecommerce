@@ -1,4 +1,4 @@
-import { addToCart } from '@/data/helpers';
+import { addToCart, removeFromCart } from '@/data/helpers';
 import type { CartItem, CartStatus } from '@/types';
 import { assign, fromPromise, setup } from 'xstate';
 import { loadCartItems, saveCartItems } from './cart.persistence';
@@ -12,7 +12,9 @@ interface CartMachineContext {
     previousCartItems: CartItem[];
 }
 
-type CartMachineEvent = { type: 'addToCart'; productId: number };
+type CartMachineEvent =
+    | { type: 'addToCart'; productId: number }
+    | { type: 'removeFromCart'; productId: number };
 
 export const cartMachine = setup({
     types: {
@@ -20,8 +22,11 @@ export const cartMachine = setup({
         events: {} as CartMachineEvent,
     },
     actors: {
-        addToCartActor: fromPromise(async ({ input }: { input: { productId: number } }) =>
-            addToCart(input.productId)
+        cartOperationActor: fromPromise(
+            async ({ input }: { input: { productId: number; operation: 'add' | 'remove' } }) =>
+                input.operation === 'remove'
+                    ? removeFromCart(input.productId)
+                    : addToCart(input.productId)
         ),
     },
     actions: {
@@ -70,14 +75,33 @@ export const cartMachine = setup({
                         'persistCartItems',
                     ],
                 },
+                removeFromCart: {
+                    target: 'pending',
+                    actions: [
+                        assign({
+                            cartStatus: 'pending',
+                            previousCartItems: ({ context }) => context.cartItems,
+                            cartItems: ({ context, event }) =>
+                                context.cartItems.filter(
+                                    (item) => item.productId !== event.productId
+                                ),
+                            error: undefined,
+                        }),
+                        'persistCartItems',
+                    ],
+                },
             },
         },
 
         pending: {
             invoke: {
-                src: 'addToCartActor',
+                src: 'cartOperationActor',
                 input: ({ event }) => ({
                     productId: (event as CartMachineEvent).productId,
+                    operation:
+                        (event as CartMachineEvent).type === 'removeFromCart'
+                            ? ('remove' as const)
+                            : ('add' as const),
                 }),
                 onError: {
                     actions: [
@@ -86,7 +110,7 @@ export const cartMachine = setup({
                             error: ({ event }) =>
                                 event.error instanceof Error
                                     ? event.error
-                                    : new Error('Failed to add the product to your cart.'),
+                                    : new Error('Failed to update your cart.'),
                         }),
                     ],
                 },
