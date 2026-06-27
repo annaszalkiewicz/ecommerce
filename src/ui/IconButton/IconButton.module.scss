@@ -1,0 +1,19 @@
+@use '@/styles/vars/variables' as *;
+
+.iconButton {
+    cursor: pointer;
+
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: 0;
+
+    font-size: $font-size-lg;
+    line-height: 1;
+    color: inherit;
+
+    background: none;
+}

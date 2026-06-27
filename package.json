@@ -12,6 +12,9 @@
         "lint:css:fix": "stylelint \"src/**/*.scss\" --fix",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage",
         "preview": "vite preview",
         "prepare": "husky"
     },
@@ -29,24 +32,31 @@
         ]
     },
     "dependencies": {
+        "@xstate/react": "^6.1.0",
         "i18next": "^26.3.0",
         "react": "^19.2.5",
         "react-dom": "^19.2.5",
         "react-i18next": "^17.0.8",
+        "xstate": "^5.32.0",
         "zustand": "^5.0.13"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@testing-library/user-event": "^14.6.1",
         "@types/node": "^24.12.2",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^6.0.1",
+        "@vitest/coverage-v8": "^4.1.8",
         "eslint": "^10.2.1",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-react-hooks": "^7.1.1",
         "eslint-plugin-react-refresh": "^0.5.2",
         "globals": "^17.5.0",
         "husky": "^9.1.7",
+        "jsdom": "^29.1.1",
         "lint-staged": "^16.4.0",
         "prettier": "^3.8.3",
         "sass": "^1.99.0",
@@ -57,6 +67,8 @@
         "stylelint-order": "^8.1.1",
         "typescript": "~6.0.2",
         "typescript-eslint": "^8.58.2",
-        "vite": "^8.0.10"
+        "vite": "^8.0.10",
+        "vite-plugin-svgr": "^5.2.0",
+        "vitest": "^4.1.8"
     }
 }

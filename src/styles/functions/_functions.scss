@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+// Base font size used to convert pixel values into rem units.
+$rem-base: 16px;
+
+// Convert a pixel value into rem units.
+// Usage:
+//   font-size: rem(18px); // 1.125rem
+//   font-size: rem(18);   // 1.125rem
+@function rem($size) {
+    @if math.is-unitless($size) {
+        $size: $size * 1px;
+    }
+
+    @return math.div($size, $rem-base) * 1rem;
+}

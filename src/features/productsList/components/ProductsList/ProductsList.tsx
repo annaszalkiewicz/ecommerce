@@ -12,10 +12,10 @@ export const ProductsList = () => {
     const { getProductsList } = useProductsListActions();
 
     useEffect(() => {
-        if (productsList.length === 0 && !isLoading) {
+        if (productsList.length === 0 && !isLoading && !error) {
             void getProductsList();
         }
-    }, [productsList.length, isLoading, getProductsList]);
+    }, [productsList.length, isLoading, error, getProductsList]);
 
     if (error) {
         return (

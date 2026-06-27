@@ -9,7 +9,7 @@ export interface Product {
 }
 
 export interface ProductsActions {
-    getProductsList: () => Promise<Product[]>;
+    getProductsList: () => Promise<void>;
 }
 
 export interface ProductsAction {
